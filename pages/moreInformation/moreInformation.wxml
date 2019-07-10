@@ -1,0 +1,24 @@
+ <view class='informationList'>
+    <block wx:for="{{engineering}}" wx:key="">
+      <view class='information' bindtap='clickInformation' data-index="{{index}}" data-id="{{item.id}}">
+        <view class='image'>
+          <image src="{{item.image}}"></image>
+        </view>
+        <view class='newsBox'>
+          <view class='informationTitle'>{{item.title}}</view>
+          <view class='informationContent'>{{item.content}}</view>
+          <view class='newsBoxBottom'>
+            <view class='informationTime'>{{item.create_time}}</view>
+            <view>
+              <text class='iconfont icon-chakan1 newsBoxBottomIconfont'></text>
+              <text class='number'>{{item.read_number}}</text>
+            </view>
+            <view>
+              <text class='iconfont icon-dianzan newsBoxBottomIconfont'></text>
+              <text class='number'>{{item.like_number}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>

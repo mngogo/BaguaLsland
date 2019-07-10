@@ -1,0 +1,10 @@
+<view class='monitorList'>
+  <block wx:for="{{monitor}}" wx:key="">
+    <view class='monitor'>
+      <view class='monitorImage' style='height:{{height}}rpx'>
+        <image src='{{item.monitorImage}}'></image>
+      </view>
+      <view class='monitorName'>{{item.monitorName}}</view>
+    </view>
+  </block>
+</view>

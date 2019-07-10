@@ -1,0 +1,57 @@
+<view class="main">
+  <view class="title">
+    <view class="order_title">姓名</view>
+    <view class="title_content">{{workOrder.username}}</view>
+  </view>
+  <view class="title">
+    <view class="order_title">电话</view>
+    <view class="title_content">{{workOrder.mobile}}</view>
+  </view>
+  <view class="title">
+    <view class="order_title">所在社区</view>
+    <view class="title_content">{{workOrder.cname}}</view>
+  </view>
+  <view class="title">
+    <view class="order_title">标题</view>
+    <view class="title_content">{{workOrder.title}}</view>
+  </view>
+  <view class="content">
+    <view class="content_title">内容</view>
+    <scroll-view scroll-y class="content_text">{{workOrder.content}}</scroll-view>
+  </view>
+  <view class="picture">
+    <view class="picture_title">图片</view>
+    <view class="picture_content">
+      <image wx:for="{{image}}" src="{{item.image}}"></image>
+    </view>
+  </view>
+  <view class="video">
+    <view class="video_title">视频</view>
+    <video src="{{workOrder.video}}" controls></video>
+  </view>
+  <view class="information" wx:if="{{workOrder.status > 2}}">
+    <view class="information_title">
+      <view class='line'></view>
+      <view class='zi'>处理信息</view>
+      <view class='line'></view>
+    </view>
+    <view class="information_content">
+      <view class="username">
+        <view class="username_title">处理人员</view>
+        <view class="username_text">{{handle.name}}</view>
+      </view>
+      <view class="usertel">
+        <view class="tel_title">联系方式</view>
+        <view class="tel_text">{{handle.mobile}}</view>
+      </view>
+    </view>
+
+  </view>
+  <view class="problem" wx:if="{{workOrder.status > 2}}">
+    <view class="problem_title">问题反馈</view>
+    <scroll-view scroll-y class="problem_content">{{workOrder.handling_feedback}}</scroll-view>
+  </view>
+  <view class="comment" wx:if="{{workOrder.status == 3}}">
+    <navigator url="/pages/workOrderComment/workOrderComment?workOrderId={{workOrder.id}}" hover-class="none">去评价</navigator>
+  </view>
+</view>

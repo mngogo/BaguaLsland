@@ -1,0 +1,108 @@
+page {
+  position: relative;
+  background-color: #f2f2f2;
+}
+
+/* 选项卡 */
+
+.xx_top {
+  width: 100%;
+  height: 90rpx;
+  z-index: 999;
+  position: fixed;
+  top: 0rpx;
+  background: white;
+  left: 0rpx;
+  box-shadow: 0rpx 0rpx 25rpx 5rpx #d4d3d3;
+  border-bottom: 1rpx solid #e2e0e0;
+}
+
+.display {
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.display-sele {
+  font-size: 30rpx;
+  width: 25%;
+  line-height: 90rpx;
+  text-align: center;
+  height: 90rpx;
+}
+
+.active {
+  color: #e64240;
+  border-bottom: 1rpx solid #e64240;
+}
+
+.flex-grow-1 {
+  min-width: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+.main {
+  width: 100%;
+  margin: 100rpx auto 0rpx;
+}
+
+.content {
+  background-color: #fff;
+  width: 100%;
+
+}
+
+.main_content {
+  position: relative;
+  width: 100%;
+  font-size: 28rpx;
+  text-align: center;
+  margin: 10rpx auto;
+  padding: 10rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.status_content {
+  position: absolute;
+  right: 10rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 26rpx;
+  background-color: #e64240;
+  color: #fff;
+  padding: 14rpx;
+  border-radius: 8rpx;
+}
+
+.model {
+  width: 100%;
+  height: 500rpx;
+  margin: 200rpx auto;
+  line-height: 500rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: rgb(112, 111, 111);
+}
+.headPortrait{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+}
+.userInformation{
+  font-size: 26rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20rpx;
+  text-align: left;
+}

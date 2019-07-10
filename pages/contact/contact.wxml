@@ -1,0 +1,6 @@
+<view class="main">
+  <view class="main_content" wx:for="{{contact}}" wx:key="" bindtap='phone' data-index="{{index}}">
+    <view class="title">{{item.name}}：</view>
+    <view class="tel">{{item.mobile}}</view>
+  </view>
+</view>

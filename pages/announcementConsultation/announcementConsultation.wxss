@@ -1,0 +1,249 @@
+page {
+  background-color: #f9f9f9;
+}
+
+@font-face {
+  font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_1262423_2vjlfdt959x.eot?t=1561684666570'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_1262423_2vjlfdt959x.eot?t=1561684666570#iefix') format('embedded-opentype'),
+         /* IE6-IE8 */ url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+         url('//at.alicdn.com/t/font_1262423_2vjlfdt959x.woff?t=1561684666570') format('woff'),
+         url('//at.alicdn.com/t/font_1262423_2vjlfdt959x.ttf?t=1561684666570') format('truetype'),
+         /* chrome,
+         firefox,
+         opera,
+         Safari,
+         Android,
+         iOS 4.2+ */ url('//at.alicdn.com/t/font_1262423_2vjlfdt959x.svg?t=1561684666570#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-horn:before {
+  content: "\e614";
+}
+
+.icon-fankui:before {
+  content: "\e60c";
+}
+
+.icon-chakan1:before {
+  content: "\e66b";
+}
+
+.icon-qianjin:before {
+  content: "\e62d";
+}
+
+.icon-xiala:before {
+  content: "\e672";
+}
+
+.icon-dianzan:before {
+  content: "\e61f";
+}
+
+.icon-jiankongshebei:before {
+  content: "\e610";
+}
+
+.box {
+  box-sizing: border-box;
+}
+
+.announcementInformation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 14rpx 16rpx;
+  border-bottom: 2rpx solid #eee;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-bottom: 10rpx;
+}
+
+.title {
+  align-items: center;
+}
+
+.titleText {
+  font-size: 28rpx;
+  font-weight: bold;
+  align-items: center;
+  color: #000;
+}
+
+.icon-horn {
+  margin-left: 10rpx;
+  font-size: 28rpx;
+  align-items: center;
+  color: #000;
+}
+
+.more {
+  align-items: center;
+  display: flex;
+}
+
+.moreText {
+  color: #666;
+  font-size: 22rpx;
+  align-items: center;
+}
+
+.icon-qianjin {
+  font-size: 22rpx;
+  color: #666;
+  align-items: center;
+  margin-left: 4rpx;
+}
+
+.informationList {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.information {
+  width: 100%;
+  margin: 14rpx 0;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 18rpx;
+}
+
+.information .image {
+  width: 34%;
+  height: 160rpx;
+}
+
+.information .image image {
+  width: 100%;
+  height: 100%;
+  border-radius: 12rpx;
+}
+.information .image video {
+  width: 100%;
+  height: 100%;
+  border-radius: 12rpx;
+}
+.titleTime {
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+}
+
+.informationTitle {
+  font-size: 24rpx;
+  width: 100%;
+  margin-bottom: 16rpx;
+	font-weight: 700;
+}
+
+.informationContent {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 22rpx;
+  width: 100%;
+  margin-bottom: 16rpx;
+}
+
+.monitoringQuery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 14rpx 16rpx;
+  border-bottom: 2rpx solid #eee;
+  box-sizing: border-box;
+  margin-bottom: 14rpx;
+  background-color: #fff;
+}
+
+.icon-jiankongshebei {
+  margin-left: 10rpx;
+  font-size: 28rpx;
+  align-items: center;
+  color: #000;
+}
+
+.monitorList {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 18rpx 0;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.monitor {
+  margin: 0 18rpx 20rpx 18rpx;
+  width: calc(50% - 36rpx);
+}
+
+.monitorImage {
+  width: 100%;
+}
+
+.monitorImage image {
+  width: 100%;
+  height: 100%;
+}
+
+.monitorName {
+  font-size: 26rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.newsBoxBottom {
+  display: flex;
+  flex-direction: row;
+  font-size: 22rpx;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.newsBox {
+  width: 66%;
+  margin-left: 24rpx;
+}
+
+.newsBoxBottomIconfont {
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.number {
+  vertical-align: middle;
+}
+
+.feedback {
+  border-radius: 50%;
+  width: 90rpx;
+  height: 90rpx;
+  line-height: 50rpx;
+  text-align: center;
+  position: fixed;
+  bottom: 100rpx;
+  right: 30rpx;
+  background-color: #e64240;
+  color: #fff;
+  display: flex;
+  box-sizing: border-box;
+}
+.icon-fankui{
+  font-size: 48rpx;
+  margin: auto;
+}

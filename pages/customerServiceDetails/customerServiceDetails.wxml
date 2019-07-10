@@ -1,0 +1,38 @@
+<!-- 选项卡 -->
+<view class="xx_top">
+  <view class="display">
+    <view class="display-sele {{check=='0' ? 'active' : ''}}" bindtap='select' data-id="0">
+      全部会话
+    </view>
+    <view class="display-sele {{check=='1' ? 'active' : ''}}" bindtap='select' data-id="1">
+      进行中
+    </view>
+    <view class="display-sele {{check=='2' ? 'active' : ''}}" bindtap='select' data-id="2">
+      已结束
+    </view>
+    <view class="display-sele {{check=='3' ? 'active' : ''}}" bindtap='select' data-id="3">
+      已评价
+    </view>
+  </view>
+</view>
+
+<view class="main" wx:if="{{array.length != 0}}">
+  <view class="content" wx:for="{{array}}">
+    <navigator url="/pages/customerServiceChat/customerServiceChat" hover-class="none">
+      <view class="main_content">
+        <image class='headPortrait' src='/images/logo.png'></image>
+        <view class='userInformation'>
+          <view class="name" style='margin-bottom: 10rpx;text-align: left;width: 300rpx;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>用户名：{{item.name}}</view>
+          <view class='problem' style='margin-bottom: 10rpx;text-align: left;width: 300rpx;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>标题：垃圾如何分类</view>
+          <view class="date" style='margin-bottom: 10rpx;text-align: left;width: 300rpx;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>日期：{{item.date}}</view>
+        </view>
+        <view class="status_content" wx:if="{{item.status == 1}}">进行中</view>
+        <view class="status_content" wx:if="{{item.status == 2}}">已结束</view>
+        <view class="status_content" wx:if="{{item.status == 3}}">已评价</view>
+      </view>
+    </navigator>
+  </view>
+</view>
+<view wx:else>
+  <view class="model">暂无用户咨询</view>
+</view>

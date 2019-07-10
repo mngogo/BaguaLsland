@@ -1,0 +1,9 @@
+page {
+  background: #f3f3f3;
+}
+
+.notice{width:96%;
+	padding-top:50rpx;
+	background: white;
+	margin:30rpx auto 0rpx;
+}

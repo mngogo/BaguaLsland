@@ -1,0 +1,58 @@
+<view class='content'>
+  <textarea placeholder='请写下您反馈的问题' maxlength='100' class='textareaContent' data-model='content'  bindinput='bindWordLimit' />
+  <view class='wordLimit'>
+    <text>还能输入</text>
+    <text class='wordNumber'>{{wordNumber}}</text>
+    <text>字</text>
+  </view>
+</view>
+<view class='uploadPictures upload'>
+    <text class='modularName'>图片上传</text>
+    <view class='pictureNumber'>
+      <text>{{uploaderPicNum}}/9</text>
+    </view>
+</view>
+<view class='ui_uploader_cell'>
+    <view class='ui_uploader_item' wx:for="{{uploaderImgList}}" wx:key="">
+        <icon class='ui_uploader_item_icon' bindtap='clearImg' data-index="{{index}}" type="clear" size="20" color="red"/>
+        <image bindtap='showImg' data-index="{{index}}" src='{{item}}'></image>
+    </view>
+    <view class='ui_uploader' bindtap='uploadPicture' wx:if="{{uploaderPicNum < 9}}">
+      <image src='/images/plus.png'></image>
+    </view>
+</view>
+<view class='uploadVideo upload'>
+    <text class='modularName'>视频上传</text>
+    <view class='pictureNumber'>
+      <text>{{uploaderVideoNum}}/1</text>
+    </view>
+</view>
+<view class='ui_uploader_cell'>
+    <view class='ui_uploader_item' wx:for="{{uploaderVideoList}}" wx:key="">
+        <icon class='ui_uploader_item_icon' bindtap='clearVideo' data-index="{{index}}" type="clear" size="20" color="red"/>
+        <video bindtap='showVideo' data-index="{{index}}" src='{{item}}'></video>
+    </view>
+    <view class='ui_uploader' bindtap='uploadVideo' wx:if="{{uploaderVideoNum < 1}}">
+      <image src='/images/plus.png'></image>
+    </view>
+</view>
+<view class='modular'>
+  <text class='modularName'>标题:</text>
+  <input placeholder='请输入标题' class='input' data-model='title'  bindinput='bindWordLimit'></input>
+</view>
+<view class='modular'>
+  <text class='modularName'>联系姓名:</text>
+  <input placeholder='请输入您的姓名' class='input' value="{{user.name}}" data-model='title'  bindinput='bindWordLimit'></input>
+</view>
+<view class='modular'>
+  <text class='modularName'>联系电话:</text>
+  <input placeholder='请输入您的联系电话' class='input' value="{{user.mobile}}" data-model='title'  bindinput='bindWordLimit'></input>
+</view>
+<view class='modular'>
+  <text class='modularName'>所在社区:</text>
+  <picker value="{{index}}" range="{{community}}" bindchange="pickChange" class='select'>
+    <text class='detailedName' wx:if="{{index == 9999}}">选择社区</text>
+    <text class='detailedName' wx:if="{{index != 9999}}">{{community[index]}}</text>
+  </picker>
+</view>
+<view class='submit' bindtap='submit'>提交</view>

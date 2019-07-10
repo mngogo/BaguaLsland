@@ -1,0 +1,76 @@
+
+page{
+   background-color: #f9f9f9;
+}
+.informationList {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.information {
+  width: 100%;
+  margin: 14rpx 0;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 18rpx;
+}
+
+.information .image {
+  width: 34%;
+  height: 160rpx;
+}
+
+.information .image image {
+  width: 100%;
+  height: 100%;
+  border-radius: 12rpx;
+}
+
+.titleTime {
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+}
+
+.informationTitle {
+  font-size: 24rpx;
+  width: 100%;
+  margin-bottom: 16rpx;
+}
+
+.informationContent {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 22rpx;
+  width: 100%;
+  margin-bottom: 16rpx;
+}
+
+.newsBoxBottom {
+  display: flex;
+  flex-direction: row;
+  font-size: 22rpx;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.newsBox {
+  width: 66%;
+  margin-left: 24rpx;
+}
+
+.newsBoxBottomIconfont {
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.number {
+  vertical-align: middle;
+}

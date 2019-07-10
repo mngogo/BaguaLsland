@@ -1,0 +1,67 @@
+<view class="main">
+  <view class="title">
+    <view class="order_title">姓名</view>
+    <view class="title_content">{{workOrder.username}}</view>
+  </view>
+  <view class="title">
+    <view class="order_title">电话</view>
+    <view class="title_content">{{workOrder.mobile}}</view>
+  </view>
+  <view class="title">
+    <view class="order_title">社区</view>
+    <view class="title_content">{{workOrder.cname}}</view>
+  </view>
+  <view class="title">
+    <view class="order_title">标题</view>
+    <view class="title_content">{{workOrder.title}}</view>
+  </view>
+  <view class="title">
+    <view class="order_title">类型</view>
+    <view class="title_content">{{workOrder.typename}}</view>
+  </view>
+  <view class="content" style="margin-top:20rpx">
+    <view class="content_title">内容</view>
+    <scroll-view scroll-y class="content_text">{{workOrder.content}}
+    </scroll-view>
+  </view>
+  <view class="picture">
+    <view class="picture_title">图片</view>
+    <view class="picture_content">
+      <image wx:for="{{image}}" wx:key="" src="{{item.image}}"></image>
+    </view>
+  </view>
+  <view class="video">
+    <view class="video_title">视频</view>
+    <video src="{{workOrder.video}}" autoplay controls></video>
+  </view>
+  <view class="information" wx:if="{{handle}}">
+    <view class="information_title">
+    <view class='line'></view>
+      <view class='zi'>处理信息</view>
+      <view class='line'></view>
+    </view>
+    <view class="information_content">
+      <view class="username">
+        <view class="username_title">处理人员</view>
+        <view class="username_text">{{handle.name}}</view>
+      </view>
+      <view class="usertel">
+        <view class="tel_title">联系方式</view>
+        <view class="tel_text">{{handle.mobile}}</view>
+      </view>
+    </view>
+
+  </view>
+  <form bindsubmit='submit' wx:if="{{workOrder.handle_id == 0}}">
+    <view class="problem">
+      <view class="problem_title">处理反馈</view>
+      <view class="problem_content">
+        <textarea class='textarea' bindinput='getContent' maxlength="1000" name="handlingFeedback"></textarea>
+				<input hidden name="id" value="{{workOrder.id}}"></input>
+      </view>
+    </view>
+    <view class="comment">
+      <button class="submit" form-type='submit'>提交</button>
+    </view>
+  </form>
+</view>

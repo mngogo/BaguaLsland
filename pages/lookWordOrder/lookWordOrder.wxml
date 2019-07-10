@@ -1,0 +1,14 @@
+<view class="main" wx:if="{{workOrder.length != 0}}">
+  <view class="main_content" wx:for="{{workOrder}}">
+    <view class="content">
+      <view class="content_text">{{item.name}}</view>
+      <view class="content_text">待接单：{{item.status1}}</view>
+      <view class="content_text">已接单：{{item.status2}}</view>
+      <view class="content_text">已处理：{{item.status3}}</view>
+    </view>
+  </view>
+  <view wx:if="{{length == 0}}" class="middle_none">~~~~~~ 到底啦 ~~~~~~</view>
+</view>
+<view wx:else>
+  <view class="length_none">暂无数据</view>
+</view>

@@ -1,0 +1,46 @@
+<form bindsubmit='submit'>
+  <view class="main">
+
+    <view class="main_content">
+      <view class="content_left">
+        <image src="/images/user.png"></image>
+      </view>
+      <view class="content_center">
+        <input type="text" placeholder="请输入您的名字" name="name" value="{{userInfo.name}}"></input>
+      </view>
+      <view class="content_right"></view>
+    </view>
+
+    <view class="main_content">
+      <view class="content_left">
+        <image src="/images/tel.png"></image>
+      </view>
+      <view class="content_center">
+        <input type="text" placeholder="请输入您的电话号码" name="mobile" value="{{userInfo.mobile}}"></input>
+      </view>
+      <view class="content_right">
+      </view>
+    </view>
+
+
+    <view class="main_content">
+      <view class="content_left">
+        <image src="/images/community.png"></image>
+      </view>
+      <view class="content_center">
+        <picker bindchange="community" value="{{index}}" range="{{community}}">
+          <view class="picker" wx:if="{{index == 999999}}">请选择所属社区</view>
+          <view class="picker" wx:if="{{index != 999999}}">{{community[index]}}</view>
+        </picker>
+      </view>
+      <view class="content_right">
+        <image src="/images/right.png"></image>
+      </view>
+    </view>
+
+  </view>
+
+
+  <!-- <view class="save">保存</view> -->
+    <button class="save" form-type='submit'>提交</button>
+</form>

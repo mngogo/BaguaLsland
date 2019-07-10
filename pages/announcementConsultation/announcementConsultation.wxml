@@ -1,0 +1,63 @@
+<view class='box'>
+  <view class='announcementInformation'>
+    <view class='title'>
+      <text class='titleText'>公告资讯</text>
+      <text class='iconfont icon-horn'></text>
+    </view>
+    <view class='more'>
+      <text class='moreText' bindtap='clickMoreInformation'>更多</text>
+      <text class='iconfont icon-qianjin'></text>
+    </view>
+  </view>
+
+  <view class='informationList'>
+    <block wx:for="{{engineering}}" wx:key="">
+      <view class='information' bindtap='clickInformation' data-index="{{index}}" data-id="{{item.id}}">
+        <view class='image'>
+          <image src="{{item.image}}"></image>
+          <!-- wx:if="{{whetherImg}}" -->
+          <!-- <video src='{{item.informationVideo}}'></video> -->
+          <!-- wx:else -->
+        </view>
+        <view class='newsBox'>
+          <view class='informationTitle'>{{item.title}}</view>
+          <view class='informationContent'>{{item.content}}</view>
+          <view class='newsBoxBottom'>
+            <view class='informationTime'>{{item.create_time}}</view>
+            <view>
+              <text class='iconfont icon-chakan1 newsBoxBottomIconfont'></text>
+              <text class='number'>{{item.read_number}}</text>
+            </view>
+            <view>
+              <text class='iconfont icon-dianzan newsBoxBottomIconfont'></text>
+              <text class='number'>{{item.like_number}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='monitoringQuery'>
+    <view class='title'>
+      <text class='titleText'>监控查询</text>
+      <text class='iconfont icon-jiankongshebei'></text>
+    </view>
+    <view class='more'>
+      <text class='moreText' bindtap='clickMonitoringQuery'>更多</text>
+      <text class='iconfont icon-qianjin'></text>
+    </view>
+  </view>
+  <view class='monitorList'>
+    <block wx:for="{{monitor}}" wx:key="">
+      <view class='monitor'>
+        <view class='monitorImage' style='height:{{height}}rpx'>
+          <image src='{{item.monitorImage}}'></image>
+        </view>
+        <view class='monitorName'>{{item.monitorName}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+<view class='feedback' bindtap='clickFeedback'>
+  <view class='iconfont icon-fankui'></view>
+</view>

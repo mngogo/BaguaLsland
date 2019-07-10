@@ -1,0 +1,4 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="title">{{notice.title}}</view>
+<view class="date">{{notice.create_time}}</view>
+<view class="notice"><template is="wxParse" data="{{wxParseData:article.nodes}}"/></view>

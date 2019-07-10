@@ -1,0 +1,185 @@
+page {
+  background: #f3f3f3;
+}
+
+.main {
+  width: 100%;
+  background: white;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.title {
+  background: white;
+  margin-bottom: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.order_title {
+  width: 23%;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+
+.title_content {
+  width: 77%;
+  font-size: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content {
+  width: 100%;
+  margin-bottom: 30rpx;
+}
+
+.content_title {
+  font-size: 28rpx;
+  font-weight: 700;
+}
+
+.content_text {
+  width: 100%;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  border-radius: 8rpx;
+  padding: 10rpx 20rpx;
+  border: 1rpx solid #e0e0e0;
+  box-sizing: border-box;
+  height: 280rpx;
+}
+
+.picture {
+  width: 100%;
+  margin-bottom: 30rpx;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #e0e0e0;
+}
+
+.picture_title {
+  width: 90%;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+
+.picture_content {
+  width: 100%;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.picture_content image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+  margin-right: 40rpx;
+  margin-bottom: 30rpx;
+}
+
+.video {
+  width: 100%;
+  margin-bottom: 30rpx;
+  box-sizing: border-box;
+}
+
+.video_title {
+  width: 100%;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+
+.video video {
+  margin-top: 20rpx;
+  width: 100%;
+  height: 400rpx;
+}
+
+/* 处理信息 */
+
+.information {
+  width: 100%;
+}
+
+.information_title {
+ width: 100%;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+}
+.information_title .zi{
+  width: 30%;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: 700;
+  margin: 0 10rpx;
+}
+.line{
+  width: 35%;
+  height: 2rpx;
+  background-color: #e0e0e0;
+}
+
+.information_content {
+  margin-top: 30rpx;
+  width: 100%;
+}
+
+.username, .usertel {
+  width: 100%;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30rpx;
+}
+
+.username_title, .tel_title {
+  width: 20%;
+  height: 100%;
+  font-weight: 700;
+}
+
+.username_text, .tel_text {
+  width: 80%;
+  height: 100%;
+}
+
+.problem {
+  width: 100%;
+}
+
+.problem_title {
+  width: 100%;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+
+.problem_content {
+  width: 100%;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  border-radius: 8rpx;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #e0e0e0;
+  height: 280rpx;
+}
+
+.submit {
+  width: 40%;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #fff;
+  background-color: #e64240;
+  border-radius: 8rpx;
+  margin: 50rpx auto;
+}
+.textarea {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,140 @@
+page {
+  background: #f3f3f3;
+	position: relative;
+}
+
+/* 选项卡 */
+.xx_top {
+  width: 100%;
+  height: 90rpx;
+  z-index: 999;
+  position: fixed;
+  top: 0rpx;
+  background: white;
+  left: 0rpx;
+  box-shadow: 0rpx 0rpx 25rpx 5rpx #d4d3d3;
+  border-bottom: 1rpx solid #e2e0e0;
+}
+
+.display {
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.display-sele {
+  font-size: 30rpx;
+  width: 20%;
+	line-height: 90rpx;
+  text-align: center;
+  height: 90rpx;
+}
+
+.active {
+  color: #e64240;
+  border-bottom: 1rpx solid #e64240;
+}
+
+.flex-grow-1 {
+  min-width: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+/* 内容 */
+.body{width:100%;
+	padding-top:100rpx;
+}
+.main_content {
+  width: 100%;
+  height: 150rpx;
+  background: white;
+  margin: 10rpx auto;
+  border-radius: 10rpx;
+}
+
+.order_left {
+  width: 76%;
+  height: 120rpx;
+  padding-top: 15rpx;
+  float: left;
+  padding-left: 20rpx;
+  border-radius: 10rpx 0rpx 0rpx 10rpx;
+}
+
+.order_title {
+  width: 100%;
+  height: 60rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+  line-height: 75rpx;
+}
+
+.order_date {
+  width: 100%;
+  height: 60rpx;
+  font-size: 30rpx;
+}
+
+.date_title {
+  float: left;
+  line-height: 60rpx;
+}
+
+.date_text {
+  font-size: 26rpx;
+  float: left;
+  line-height: 60rpx;
+}
+
+.order_right {
+  width: 20%;
+  height: 150rpx;
+  float: left;
+  border-radius: 0rpx 10rpx 10rpx 0rpx;
+}
+
+.order_right image {
+  width: 50%;
+  height: 73rpx;
+  margin-top: 36rpx;
+  margin-left: 50rpx;
+}
+
+.order_right .status{
+  width: 70%;
+  height: 100rpx;
+	border-radius: 50%;
+  margin-top: 25rpx;
+  margin-left: 30rpx;
+	font-size:28rpx;
+	color:#e64240;
+	border:1rpx solid #e64240;
+	transform: rotate(-45deg);
+	line-height: 100rpx;
+	text-align: center;
+}
+
+.middle_none{width:100%;
+	height:60rpx;
+	margin-top:20rpx;
+	line-height: 60rpx;
+	text-align: center;
+	font-size:30rpx;
+	color:#808080;
+}
+
+.length_none{width:100%;
+	height:200rpx;
+	margin-top:200rpx;
+	line-height: 200rpx;
+	text-align: center;
+	font-size:30rpx;
+	color:#808080;
+}

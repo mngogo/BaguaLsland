@@ -1,0 +1,70 @@
+<view class='top'>
+  <image src='/images/logo.png' class='serverHead'></image>
+  <view class='smallBox'>
+    <view class='serverName'>客服1号</view>
+    <view class='welcome'>"Technocrats,欢迎您"</view>
+  </view>
+  <view class='workOrder' catchtap='workOrder'>
+    <view class='iconfont icon-fankui'></view>
+  </view>
+</view>
+<view class='content' style='padding-bottom:{{paddingBottom}}px' catchtap='clickContent'>
+  <scroll-view scroll-y="true" style='width:100%;height:100%;box-sizing:border-box;border:1px solid #f1f1f1' scroll-top="{{scrollTop}}">
+    <view id='talkInterface' style='width:100%;'>
+      <block wx:for='{{msgList}}' wx:key="">
+        <!-- 左侧消息 -->
+        <view class='chat' wx:if='{{item.speaker=="server"}}' id='msg{{index}}'>
+          <view class='headPortrait'>
+            <image src='/images/logo.png'></image>
+          </view>
+          <view class='leftTriangle'></view>
+          <view class='leftMsg' wx:if='{{item.contentType=="text"}}'>{{item.content}}</view>
+          <view class='imgBox' style='margin-right:12rpx;' wx:if="{{item.contentType=='img'}}">
+            <image id='msg{{index}}' src='{{itemImg}}' mode='widthFix' style="width: 200rpx;margin-bottom:20rpx;" catchtap='showImg' data-index="{{indexImg}}" wx:for="{{item.imgs}}" wx:for-item="itemImg" wx:for-index="indexImg" wx:key="" data-id="{{index}}"></image>
+          </view>
+          <video id='msg{{index}}' src='{{item.video}}' wx:if="{{item.contentType=='video'}}" style='width:50%;margin-right:12rpx;'></video>
+        </view>
+        <!-- 右侧消息 -->
+        <view class='chat' wx:else style='justify-content: flex-end;' id='msg{{index}}'>
+          <view class='rightMsg' wx:if='{{item.contentType=="text"}}'>{{item.content}}</view>
+          <view class='imgBox' style='margin-right:12rpx;' wx:if="{{item.contentType=='img'}}">
+            <image id='msg{{index}}' src='{{itemImg}}' mode='widthFix' style="width: 200rpx;margin-bottom:20rpx;" catchtap='showImg' data-index="{{indexImg}}" wx:for="{{item.imgs}}" wx:for-item="itemImg" wx:for-index="indexImg" wx:key="" data-id="{{index}}"></image>
+          </view>
+          <video id='msg{{index}}' src='{{item.video}}' wx:if="{{item.contentType=='video'}}" style='width:50%;margin-right:12rpx;'></video>
+          <view class='rightTriangle' wx:if="{{item.contentType=='text'}}"></view>
+          <view class='headPortrait'>
+            <image src='/images/logo.png'></image>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>
+<view class='bottom' id='flag' style='bottom:{{bottom}}px'>
+  <view class='bottomBox'>
+    <view class='functionBox'>
+      <view class='imageBox' catchtap='clickLaugh'>
+        <image src='/images/laugh.png'></image>
+      </view>
+      <view class='imageBox' catchtap='clickMore'>
+        <image src='/images/jia.png'></image>
+      </view>
+    </view>
+    <view style='position:relative;width:90%;'>
+      <input class='input' type='text' bindconfirm='sendClick' value='{{inputVal}}' adjust-position='{{false}}' confirm-type='send' confirm-hold='true' bindinput='bindinput' bindfocus="focus" bindblur='blur'>
+      <button class='sendBox' bindtap='clikSend'>发送</button>
+      </input>
+    </view>
+  </view>
+  <view class='moreBox' hidden="{{showFunction}}">
+    <view class='picture image' catchtap='clickPicture'>
+      <image src='/images/picture.png'></image>
+    </view>
+    <view class='video image' csatchtap='clickVideo'>
+      <image src='/images/video.png'></image>
+    </view>
+  </view>
+  <view class='expressionBox' hidden="{{showEmoj}}">
+    <view wx:for="{{expression}}" wx:key="" class='expression' data-index="{{index}}" catchtap='clickEmoj'>{{item}}</view>
+  </view>
+</view>

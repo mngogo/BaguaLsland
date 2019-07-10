@@ -1,0 +1,24 @@
+<view class="main">
+  <view class="title">请您对我们的服务作出评价</view>
+  <view class="content">
+    <view class="content_title">本次问题是否解决呢？</view>
+    <view class="content_text">
+      <view class="expression" bindtap='satisfiedTap' wx:for="{{satisfied}}" data-id="{{item.id}}" data-status="{{item.status}}">
+        <image wx:if="{{item.type == 1}}" src="/images/{{item.status == 2 && item.type == 1?'xiao.png':'xiao_1.png'}}" class="image" />
+        <image wx:if="{{item.type == 2}}" src="/images/{{item.status == 2 && item.type == 2?'ku.png':'ku_1.png'}}" class="image" />
+				<view class="expression_text" style="color:{{item.status == 2?'#646262':'#e64240'}}">{{item.type == 1?'已解决':'未解决'}}</view>
+      </view>
+    </view>
+    <view class="content_title">本次服务您是否满意呢？</view>
+    <view class="content_comment">
+        <image wx:for="{{5}}" class="image1" data-index="{{index}}" bindtap='selectIndexNum' src="{{score >= index ? '/images/xingxing.png' : '/images/null.png'}}" />
+    </view>
+		<view class="content_comment1" wx:if="{{zp == 5}}">非常满意</view>
+		<view class="content_comment1" wx:if="{{zp == 4}}">满意</view>
+		<view class="content_comment1" wx:if="{{zp == 3}}">一般</view>
+		<view class="content_comment1" wx:if="{{zp == 2}}">较差</view>
+		<view class="content_comment1" wx:if="{{zp == 1}}">非常差</view>
+  </view>
+
+  <view class="submit" bindtap='submit'>提交评分</view>
+</view>

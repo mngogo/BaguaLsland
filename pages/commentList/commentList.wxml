@@ -1,0 +1,21 @@
+<view class="main" wx:if="{{comment}}">
+  <view class="main_content" wx:for="{{comment}}">
+    <view class="content">
+      <view class="content_text">{{item.name}}</view>
+      <view class="content_text" wx:if="{{item.role == 1}}">普通员工</view>
+      <view class="content_text" wx:if="{{item.role == 2}}">客服</view>
+      <view class="content_text" wx:if="{{item.role == 3}}">工单处理</view>
+      <view class="content_text" wx:if="{{item.solve == 1}}">已解决</view>
+      <view class="content_text" wx:if="{{item.solve == 2}}">未解决</view>
+      <view class="content_text" wx:if="{{item.satisfied == 1}}">非常差</view>
+      <view class="content_text" wx:if="{{item.satisfied == 2}}">较差</view>
+      <view class="content_text" wx:if="{{item.satisfied == 3}}">一般</view>
+      <view class="content_text" wx:if="{{item.satisfied == 4}}">满意</view>
+      <view class="content_text" wx:if="{{item.satisfied == 5}}">非常满意</view>
+    </view>
+  </view>
+  <view wx:if="{{length == 0}}" class="middle_none">~~~~~~ 到底啦 ~~~~~~</view>
+</view>
+<view wx:else>
+  <view class="length_none">暂无数据</view>
+</view>

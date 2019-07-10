@@ -1,0 +1,28 @@
+
+.main{width:96%;
+	height:500rpx;
+	margin:40rpx auto;
+}
+
+.main_content{width:100%;
+	height:90rpx;
+	border-radius: 15rpx;
+	background: #f3f3f3;
+	margin-top:20rpx;
+	}
+
+.content{width:90%;
+	height:100%;
+	font-size:26rpx;
+	line-height: 90rpx;
+	margin:0rpx auto;
+}
+
+.content_left{width:65%;
+	height:100%;
+	float:left;
+}
+.content_right{width:35%;
+	height:100%;
+	float:left;
+}

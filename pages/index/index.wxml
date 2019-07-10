@@ -1,0 +1,36 @@
+<!-- 轮播图 -->
+<swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
+  <block wx:for="{{banner}}" wx:for-index="index">
+    <swiper-item>
+      <image src='{{item.image}}' class='u-img-slide' mode='aspectFill'></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!--服务内容-->
+<view class='recommend'>
+  <text class='recommend-title'>服务内容</text>
+</view>
+
+<view class="service">
+  <view class="content">
+    <navigator url="/pages/headCloudCommunity/headCloudCommunity" hover-class="none">
+      <view class="service_content">
+        <view class="community">掌上云社区</view>
+        <view class="community_icon">
+          <image src="/images/community_1.png" />
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class="content">
+    <navigator url="/pages/announcementConsultation/announcementConsultation" hover-class="none">
+      <view class="service_content">
+        <view class="community">雪亮工程</view>
+        <view class="community_icon">
+          <image src="/images/engineering_1.png" />
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>

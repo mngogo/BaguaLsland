@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/wxLogin/wxLogin",
+    "pages/index/index",
+    "pages/commentList/commentList",
+    "pages/questionFeedback/questionFeedback",
+    "pages/user/user",
+    "pages/lookWordOrder/lookWordOrder",
+    "pages/workOrderProcessing/workOrderProcessing",
+    "pages/employeeSide/employeeSide",
+    "pages/noticeDetails/noticeDetails",
+    "pages/notice/notice",
+    "pages/workOrder/workOrder",
+    "pages/workOrderComment/workOrderComment",
+    "pages/workOrderSubmit/workOrderSubmit",
+    "pages/userInfo/userinfo",
+    "pages/login/login",
+    "pages/wxTelNumber/wxTelNumber",
+    "pages/headCloudCommunity/headCloudCommunity",
+    "pages/announcementConsultation/announcementConsultation",
+    "pages/moreInformation/moreInformation",
+    "pages/detailsOfInformation/detailsOfInformation",
+    "pages/moreMonitoringQuery/moreMonitoringQuery",
+    "pages/customerServiceChat/customerServiceChat",
+    "pages/workOrderForm/workOrderForm",
+    "pages/customerServiceDetails/customerServiceDetails",
+    "pages/userSession/userSession",
+    "pages/contact/contact",
+    "pages/customerService/customerService",
+    "pages/waitingListWorkOrder/waitingListWorkOrder",
+    "pages/userChat/userChat",
+    "pages/introduce/introduce",
+    "pages/workOrderDetails/workOrderDetails",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e64240",
+    "navigationBarTitleText": "八卦洲",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "color": "#666666",
+    "selectedColor": "#e64240",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index_1.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user_1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

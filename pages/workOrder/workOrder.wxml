@@ -1,0 +1,45 @@
+<!-- 选项卡 -->
+<view class="xx_top">
+  <view class="display">
+    <view class="display-sele {{check=='0' ? 'active' : ''}}" bindtap='select' data-check="0">
+      全部工单
+    </view>
+    <view class="display-sele {{check=='1' ? 'active' : ''}}" bindtap='select' data-check="1">
+      已提交
+    </view>
+    <view class="display-sele {{check=='2' ? 'active' : ''}}" bindtap='select' data-check="2">
+      待处理
+    </view>
+    <view class="display-sele {{check=='3' ? 'active' : ''}}" bindtap='select' data-check="3">
+      已完成
+    </view>
+    <view class="display-sele {{check=='4' ? 'active' : ''}}" bindtap='select' data-check="4">
+      已评分
+    </view>
+  </view>
+</view>
+<view class="body" wx:if="{{workOrder.length != 0}}">
+  <view class="main" wx:for="{{workOrder}}">
+    <navigator url="/pages/workOrderDetails/workOrderDetails?workOrderId={{item.id}}" hover-class="none">
+      <view class="main_content">
+        <view class="order_left">
+          <view class="order_title">{{item.title}}</view>
+          <view class="order_date">
+            <view class="date_title">提交时间：</view>
+            <view class="date_text">{{item.create_time}}</view>
+          </view>
+        </view>
+        <view class="order_right">
+          <view wx:if="{{item.status == 1}}" class="status">已提交</view>
+          <view wx:if="{{item.status == 2}}" class="status">待处理</view>
+          <view wx:if="{{item.status == 3}}" class="status">已完成</view>
+          <view wx:if="{{item.status == 4}}" class="status">已评价</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view wx:if="{{length == 0}}" class="middle_none">~~~~~~ 到底啦 ~~~~~~</view>
+</view>
+<view wx:else>
+  <view class="length_none">暂无数据</view>
+</view>

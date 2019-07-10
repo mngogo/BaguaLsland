@@ -1,0 +1,10 @@
+<view class="main">
+  <view class="main_content" wx:for="{{array}}">
+    <navigator url="/pages/customerServiceDetails/customerServiceDetails" hover-class="none">
+      <view class="content">
+        <view class="content_left">{{item.name}}</view>
+        <view class="content_right">会话次数:{{item.number}}次</view>
+      </view>
+    </navigator>
+  </view>
+</view>

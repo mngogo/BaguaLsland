@@ -1,0 +1,27 @@
+<view class="main" wx:if="{{workOrder.length != 0}}">
+  <view class="main_content" wx:for="{{workOrder}}">
+    <view class="content">
+      <navigator url="/pages/workOrderProcessing/workOrderProcessing?id={{item.id}}" hover-class="none">
+        <view class="content_left">
+          <view class="title">{{item.title}}</view>
+          <view class="date">{{item.create_time}}</view>
+        </view>
+      </navigator>
+      <view class="content_right">
+        <view class="receipt" bindtap='accept' wx:if="{{item.status == 1}}" data-id="{{item.id}}" data-index="{{index}}">接单</view>
+        <navigator url="/pages/workOrderProcessing/workOrderProcessing?id={{item.id}}" hover-class="none">
+          <view class="receipt" wx:if="{{item.status == 2}}">处理</view>
+        </navigator>
+        <navigator url="/pages/workOrderProcessing/workOrderProcessing?id={{item.id}}" hover-class="none">
+          <view class="receipt" wx:if="{{item.status > 2}}">查看</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{length == 0}}" class="middle_none">~~~~~~ 到底啦 ~~~~~~</view>
+</view>
+<view wx:else>
+  <view class="length_none" wx:if="{{status == 1}}">暂无未接工单</view>
+  <view class="length_none" wx:if="{{status == 2}}">暂无处理中工单</view>
+  <view class="length_none" wx:if="{{status > 2}}">暂无已完成工单</view>
+</view>

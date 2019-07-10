@@ -1,0 +1,114 @@
+<view class="top">
+  <image src="/images/3.jpg" class="image" />
+  <view class="top_image">
+    <image src="/images/3.jpg" />
+  </view>
+</view>
+
+<view class="main">
+  <!-- 客服 -->
+  <view wx:if="{{userInfo.role == 2}}">
+    <navigator url="/pages/userSession/userSession" hover-class="none">
+      <view class="main_content">
+        <view class="center">
+          <view class="icon">
+            <image src="/images/user.png" />
+          </view>
+          <view class="text">用户会话</view>
+        </view>
+      </view>
+    </navigator>
+    <navigator url="/pages/workOrder/workOrder" hover-class="none">
+      <view class="main_content">
+        <view class="center">
+          <view class="icon">
+            <image src="/images/introduce.png" />
+          </view>
+          <view class="text">我的工单</view>
+        </view>
+      </view>
+    </navigator>
+    <!-- <navigator url="/pages/workOrderForm/workOrderForm" hover-class="none">
+    <view class="main_content" wx:if="{{user == 1}}">
+      <view class="center">
+        <view class="icon">
+          <image src="/images/xie.png" />
+        </view>
+        <view class="text">填写工单</view>
+      </view>
+    </view>
+  </navigator> -->
+  </view>
+
+  <!-- 工单处理 -->
+  <view wx:if="{{userInfo.role == 3}}">
+    <navigator url="/pages/waitingListWorkOrder/waitingListWorkOrder?status=1" hover-class="none">
+      <view class="main_content">
+        <view class="center">
+          <view class="icon">
+            <image src="/images/wait.png" />
+          </view>
+          <view class="text">待接工单</view>
+        </view>
+      </view>
+    </navigator>
+
+    <navigator url="/pages/waitingListWorkOrder/waitingListWorkOrder?status=2" hover-class="none">
+      <view class="main_content">
+        <view class="center">
+          <view class="icon">
+            <image src="/images/accept.png" />
+          </view>
+          <view class="text">已接工单</view>
+        </view>
+      </view>
+    </navigator>
+
+    <navigator url="/pages/waitingListWorkOrder/waitingListWorkOrder?status=4" hover-class="none">
+      <view class="main_content">
+        <view class="center">
+          <view class="icon">
+            <image src="/images/complete_1.png" />
+          </view>
+          <view class="text">已结工单</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+  <!-- 管理者 -->
+  <view wx:if="{{userInfo.role == 4}}">
+    <navigator url="/pages/customerService/customerService" hover-class="none">
+      <view class="main_content">
+        <view class="center">
+          <view class="icon">
+            <image src="/images/customer_service.png" />
+          </view>
+          <view class="text">客服管理</view>
+        </view>
+      </view>
+    </navigator>
+
+    <navigator url="/pages/lookWordOrder/lookWordOrder" hover-class="none">
+      <view class="main_content">
+        <view class="center">
+          <view class="icon">
+            <image src="/images/work_order.png" />
+          </view>
+          <view class="text">工单查看</view>
+        </view>
+      </view>
+    </navigator>
+
+    <navigator url="/pages/commentList/commentList" hover-class="none">
+      <view class="main_content">
+        <view class="center">
+          <view class="icon">
+            <image src="/images/comment.png" />
+          </view>
+          <view class="text">评价管理</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>

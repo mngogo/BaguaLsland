@@ -1,0 +1,80 @@
+<!-- 头部 -->
+<view class="banner">
+  <image class="image" src="{{userInfo.avatar}}"></image>
+  <view class="avatar">
+    <image src="{{userInfo.avatar}}"></image>
+  </view>
+  <view class="username">{{userInfo.nick}}</view>
+</view>
+
+<!-- 主体 -->
+<view class="main">
+  <view class="main_center">
+    <navigator url="/pages/userInfo/userinfo" hover-class="none">
+      <view class="main_content">
+        <view class="content_left">
+          <image src="/images/user_data.png"></image>
+        </view>
+        <view class="content_center">个人信息</view>
+        <view class="content_right">
+          <image src="/images/right.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <navigator url="/pages/workOrder/workOrder" hover-class="none">
+      <view class="main_content">
+        <view class="content_left">
+          <image src="/images/work_order.png"></image>
+        </view>
+        <view class="content_center">我的工单</view>
+        <view class="content_right">
+          <image src="/images/right.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <navigator url="/pages/introduce/introduce" hover-class="none">
+      <view class="main_content">
+        <view class="content_left">
+          <image src="/images/introduce.png"></image>
+        </view>
+        <view class="content_center">平台介绍</view>
+        <view class="content_right">
+          <image src="/images/right.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <navigator url="/pages/notice/notice" hover-class="none">
+      <view class="main_content">
+        <view class="content_left">
+          <image src="/images/notice.png"></image>
+        </view>
+        <view class="content_center">平台公告</view>
+        <view class="content_right">
+          <image src="/images/right.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <navigator url="/pages/contact/contact" hover-class="none">
+      <view class="main_content">
+        <view class="content_left">
+          <image src="/images/tel.png"></image>
+        </view>
+        <view class="content_center">联系我们</view>
+        <view class="content_right">
+          <image src="/images/right.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <navigator url="/pages/employeeSide/employeeSide" hover-class="none" wx:if="{{userInfo.role != 1}}">
+      <view class="main_content">
+        <view class="content_left">
+          <image src="/images/staff.png"></image>
+        </view>
+        <view class="content_center">工作人员端</view>
+        <view class="content_right">
+          <image src="/images/right.png"></image>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>
